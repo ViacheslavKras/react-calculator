@@ -148,16 +148,18 @@ const App = () => {
         { label: '.', clazz: 'btn-outline-primary' }
     ];
 
-    const actionButtons = [
+    const mainActionButtons = [
         { label: '÷', value: '/', clazz: 'btn-warning' },
         { label: 'x', value: '*', clazz: 'btn-warning' },
         { label: '-', value: '-', clazz: 'btn-warning' },
-        { label: '+', value: '+', clazz: 'btn-warning' },
+        { label: '+', value: '+', clazz: 'btn-warning' }
+    ];
 
+    const secondActionButtons = [
         { label: '(', value: '(', clazz: 'btn-light' },
         { label: ')', value: ')', clazz: 'btn-light' },
         { label: '√', value: 'sqrt', clazz: 'btn-light' },
-        { label: '+/-', value: '+/-', clazz: 'btn-light' },
+        { label: '+/-', value: '+/-', clazz: 'btn-light' }
     ];
 
     return (
@@ -177,9 +179,21 @@ const App = () => {
                     </div>
                 </div>
 
+                <div className="row row-cols-6">
+                    {
+                        secondActionButtons.map((item) => {
+                            return (
+                                <div key={item.label} className="d-grid col">
+                                    <button type='button' className={`btn btn-sm ${item.clazz}`} onClick={() => onActionClick(item.value)}>{item.label}</button>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+
                 <div className="row row-cols-4">
                     {
-                        actionButtons.map((item) => {
+                        mainActionButtons.map((item) => {
                             return (
                                 <div key={item.label} className="d-grid col">
                                     <button type='button' className={`btn btn-lg ${item.clazz}`} onClick={() => onActionClick(item.value)}>{item.label}</button>
