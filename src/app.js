@@ -42,6 +42,10 @@ const App = () => {
                 const oneDiv = 1 / targ;
                 setValue((value) => [...value.slice(0, idSpase + 1), oneDiv]);
                 break;
+            // dot .
+            case act === '.':
+                setValue((value) => [...value, act]);
+                break;
 
             default: setValue((value) => [...value, ' ', act, ' ']);
         }
