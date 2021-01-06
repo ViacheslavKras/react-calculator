@@ -10,7 +10,7 @@ const App = () => {
 
     const onActionClick = (act) => {
         const idSpase = value.lastIndexOf(' '); // last space
-        const targ = value.slice(idSpase + 1).filter((e) => !isNaN(e)).join(''); // last number
+        const targ = value.slice(idSpase + 1).filter((e) => !isNaN(e) || e === '.').join(''); // last number
 
         switch (true) {
             // set multiplication before parentheses
