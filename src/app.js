@@ -10,7 +10,7 @@ const App = () => {
 
     const onActionClick = (act) => {
         const idSpase = value.lastIndexOf(' '); // last space
-        const targ = value.slice(idSpase + 1).filter((e) => !isNaN(e) || e === '.').join(''); // last number
+        const lastNum = value.slice(idSpase + 1).filter((e) => !isNaN(e) || e === '.').join(''); // last number
 
         switch (true) {
             // set multiplication before parentheses
@@ -19,7 +19,7 @@ const App = () => {
                 break;
             // change to negative number
             case act === '+/-':
-                const neg = -targ;
+                const neg = -lastNum;
                 // double minus
                 if (value[idSpase - 1] === '-') {
                     setValue((value) => [...value.slice(0, idSpase + 1), '(', neg, ')']);
@@ -29,17 +29,17 @@ const App = () => {
                 break;
             // square root
             case act === 'sqrt':
-                const sqrt = Math.sqrt(targ);
+                const sqrt = Math.sqrt(lastNum);
                 setValue((value) => [...value.slice(0, idSpase + 1), sqrt]);
                 break;
             // round
             case act === 'round':
-                const round = Math.round(targ);
+                const round = Math.round(lastNum);
                 setValue((value) => [...value.slice(0, idSpase + 1), round]);
                 break;
             // 1/x
             case act === '1/x':
-                const oneDiv = 1 / targ;
+                const oneDiv = 1 / lastNum;
                 setValue((value) => [...value.slice(0, idSpase + 1), oneDiv]);
                 break;
             // dot .
