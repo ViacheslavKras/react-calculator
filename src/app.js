@@ -37,6 +37,11 @@ const App = () => {
                 const round = Math.round(targ);
                 setValue((value) => [...value.slice(0, idSpase + 1), round]);
                 break;
+            // 1/x
+            case act === '1/x':
+                const oneDiv = 1 / targ;
+                setValue((value) => [...value.slice(0, idSpase + 1), oneDiv]);
+                break;
 
             default: setValue((value) => [...value, ' ', act, ' ']);
         }
@@ -165,7 +170,8 @@ const App = () => {
         { label: ')', value: ')', clazz: 'btn-light' },
         { label: '√', value: 'sqrt', clazz: 'btn-light' },
         { label: '+/-', value: '+/-', clazz: 'btn-light' },
-        { label: 'round', value: 'round', clazz: 'btn-light' }
+        { label: 'round', value: 'round', clazz: 'btn-light' },
+        { label: '1/x', value: '1/x', clazz: 'btn-light' }
     ];
 
     return (
