@@ -57,6 +57,11 @@ const App = () => {
                 const cbrt = Math.cbrt(lastNum);
                 setValue((value) => [...value.slice(0, idSpase + 1), cbrt]);
                 break;
+            // natural logarithm
+            case act === 'ln':
+                const ln = Math.log(lastNum);
+                setValue((value) => [...value.slice(0, idSpase + 1), ln]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -193,7 +198,8 @@ const App = () => {
         { label: '1/x', value: '1/x', clazz: 'btn-light' },
         { label: 'x\u00B2', value: 'x^2', clazz: 'btn-light' },
         { label: 'x\u00B3', value: 'x^3', clazz: 'btn-light' },
-        { label: '\u00B3√', value: 'cbrt', clazz: 'btn-light' }
+        { label: '\u00B3√', value: 'cbrt', clazz: 'btn-light' },
+        { label: 'ln', value: 'ln', clazz: 'btn-light' }
     ];
 
     return (
