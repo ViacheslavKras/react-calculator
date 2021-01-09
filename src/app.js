@@ -62,6 +62,11 @@ const App = () => {
                 const ln = Math.log(lastNum);
                 setValue((value) => [...value.slice(0, idSpase + 1), ln]);
                 break;
+            // common logarithm
+            case act === 'lg':
+                const lg = Math.log10(lastNum);
+                setValue((value) => [...value.slice(0, idSpase + 1), lg]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -199,7 +204,8 @@ const App = () => {
         { label: 'x\u00B2', value: 'x^2', clazz: 'btn-light' },
         { label: 'x\u00B3', value: 'x^3', clazz: 'btn-light' },
         { label: '\u00B3√', value: 'cbrt', clazz: 'btn-light' },
-        { label: 'ln', value: 'ln', clazz: 'btn-light' }
+        { label: 'ln', value: 'ln', clazz: 'btn-light' },
+        { label: 'lg', value: 'lg', clazz: 'btn-light' }
     ];
 
     return (
