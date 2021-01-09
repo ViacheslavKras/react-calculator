@@ -47,6 +47,11 @@ const App = () => {
                 const pow2 = lastNum * lastNum;
                 setValue((value) => [...value.slice(0, idSpase + 1), pow2]);
                 break;
+            // x^3
+            case act === 'x^3':
+                const pow3 = lastNum * lastNum * lastNum;
+                setValue((value) => [...value.slice(0, idSpase + 1), pow3]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -181,7 +186,8 @@ const App = () => {
         { label: '+/-', value: '+/-', clazz: 'btn-light' },
         { label: 'round', value: 'round', clazz: 'btn-light' },
         { label: '1/x', value: '1/x', clazz: 'btn-light' },
-        { label: 'x\u00B2', value: 'x^2', clazz: 'btn-light' }
+        { label: 'x\u00B2', value: 'x^2', clazz: 'btn-light' },
+        { label: 'x\u00B3', value: 'x^3', clazz: 'btn-light' }
     ];
 
     return (
