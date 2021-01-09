@@ -42,6 +42,11 @@ const App = () => {
                 const oneDiv = 1 / lastNum;
                 setValue((value) => [...value.slice(0, idSpase + 1), oneDiv]);
                 break;
+            // x^2
+            case act === 'x^2':
+                const pow2 = lastNum * lastNum;
+                setValue((value) => [...value.slice(0, idSpase + 1), pow2]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -175,7 +180,8 @@ const App = () => {
         { label: '√', value: 'sqrt', clazz: 'btn-light' },
         { label: '+/-', value: '+/-', clazz: 'btn-light' },
         { label: 'round', value: 'round', clazz: 'btn-light' },
-        { label: '1/x', value: '1/x', clazz: 'btn-light' }
+        { label: '1/x', value: '1/x', clazz: 'btn-light' },
+        { label: 'x\u00B2', value: 'x^2', clazz: 'btn-light' }
     ];
 
     return (
