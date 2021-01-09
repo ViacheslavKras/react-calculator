@@ -67,6 +67,18 @@ const App = () => {
                 const lg = Math.log10(lastNum);
                 setValue((value) => [...value.slice(0, idSpase + 1), lg]);
                 break;
+            // factorial
+            case act === 'n!':
+                const fact = () => {
+                    let result = 1;
+                    let n = lastNum;
+                    while (n) {
+                        result *= n--;
+                    }
+                    return result
+                };
+                setValue((value) => [...value.slice(0, idSpase + 1), fact()]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -205,7 +217,8 @@ const App = () => {
         { label: 'x\u00B3', value: 'x^3', clazz: 'btn-light' },
         { label: '\u00B3√', value: 'cbrt', clazz: 'btn-light' },
         { label: 'ln', value: 'ln', clazz: 'btn-light' },
-        { label: 'lg', value: 'lg', clazz: 'btn-light' }
+        { label: 'lg', value: 'lg', clazz: 'btn-light' },
+        { label: 'n!', value: 'n!', clazz: 'btn-light' }
     ];
 
     return (
