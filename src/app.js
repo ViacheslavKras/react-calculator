@@ -52,6 +52,11 @@ const App = () => {
                 const pow3 = lastNum * lastNum * lastNum;
                 setValue((value) => [...value.slice(0, idSpase + 1), pow3]);
                 break;
+            // cube root
+            case act === 'cbrt':
+                const cbrt = Math.cbrt(lastNum);
+                setValue((value) => [...value.slice(0, idSpase + 1), cbrt]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -187,7 +192,8 @@ const App = () => {
         { label: 'round', value: 'round', clazz: 'btn-light' },
         { label: '1/x', value: '1/x', clazz: 'btn-light' },
         { label: 'x\u00B2', value: 'x^2', clazz: 'btn-light' },
-        { label: 'x\u00B3', value: 'x^3', clazz: 'btn-light' }
+        { label: 'x\u00B3', value: 'x^3', clazz: 'btn-light' },
+        { label: '\u00B3√', value: 'cbrt', clazz: 'btn-light' }
     ];
 
     return (
