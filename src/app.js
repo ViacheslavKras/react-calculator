@@ -15,7 +15,7 @@ const App = () => {
         switch (true) {
             // set multiplication before parentheses
             case act === '(' && typeof value[value.length - 1] === 'number':
-                setValue((value) => [...value, ' ', '*', ' ', act]);
+                setValue((value) => [...value, ' ', '*', ' ', act, ' ']);
                 break;
             // change to negative number
             case act === '+/-':
