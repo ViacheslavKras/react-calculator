@@ -85,6 +85,11 @@ const App = () => {
                 };
                 setValue((value) => [...value.slice(0, idSpase + 1), fact()]);
                 break;
+            // pi
+            case act === 'pi':
+                const pi = Math.PI;
+                setValue((value) => [...value, pi]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -224,7 +229,8 @@ const App = () => {
         { label: '\u00B3√', value: 'cbrt', clazz: 'btn-light' },
         { label: 'ln', value: 'ln', clazz: 'btn-light' },
         { label: 'lg', value: 'lg', clazz: 'btn-light' },
-        { label: 'n!', value: 'n!', clazz: 'btn-light' }
+        { label: 'n!', value: 'n!', clazz: 'btn-light' },
+        { label: '\u03C0', value: 'pi', clazz: 'btn-light' }
     ];
 
     return (
