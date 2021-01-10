@@ -15,7 +15,7 @@ const App = () => {
     };
 
     const onActionClick = (act) => {
-        const idSpase = value.lastIndexOf(' '); // last space
+        const idSpase = value.join('').replace(/\s*$/, "").split('').lastIndexOf(' '); // last space before number
         const lastNum = value.slice(idSpase + 1).filter((e) => !isNaN(e) || e === '.').join(''); // last number
 
         switch (true) {
