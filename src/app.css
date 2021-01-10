@@ -12,3 +12,17 @@
 .result {
     padding: 0.25rem 0 0.25rem 0;
 }
+
+.cursor {
+    font-weight: 100;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+      color: #ffffff;
+    }
+    100% {
+      color: #00000050;
+    }
+  }
