@@ -242,7 +242,7 @@ const App = () => {
     return (
         <div className='main' onKeyDown={handleKey} tabIndex='0'>
             <div className='result'>
-                <h1>{(value.length === 0) ? '0' : value.join('')}</h1>
+                <h1>{(value.length === 0) ? '' : value.join('')}<span>|</span></h1>
             </div>
 
             <div className='container'>
