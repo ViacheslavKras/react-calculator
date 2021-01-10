@@ -131,34 +131,34 @@ const App = () => {
 
         switch (event.key) {
             case '1':
-                onButtonClick('1');
+                onButtonClick(1);
                 break;
             case '2':
-                onButtonClick('2');
+                onButtonClick(2);
                 break;
             case '3':
-                onButtonClick('3');
+                onButtonClick(3);
                 break;
             case '4':
-                onButtonClick('4');
+                onButtonClick(4);
                 break;
             case '5':
-                onButtonClick('5');
+                onButtonClick(5);
                 break;
             case '6':
-                onButtonClick('6');
+                onButtonClick(6);
                 break;
             case '7':
-                onButtonClick('7');
+                onButtonClick(7);
                 break;
             case '8':
-                onButtonClick('8');
+                onButtonClick(8);
                 break;
             case '9':
-                onButtonClick('9');
+                onButtonClick(9);
                 break;
             case '0':
-                onButtonClick('0');
+                onButtonClick(0);
                 break;
 
             case '/':
