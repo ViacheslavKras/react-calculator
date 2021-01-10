@@ -5,6 +5,12 @@ const App = () => {
     const [value, setValue] = useState([]);
 
     const onButtonClick = (num) => {
+        // set multiplication after parentheses
+        if (value[value.length - 2] === ')') {
+            setValue((value) => [...value, '*', ' ', num]);
+            return;
+        }
+
         setValue((value) => [...value, num]);
     };
 
