@@ -90,6 +90,11 @@ const App = () => {
                 const pi = Math.PI;
                 setValue((value) => [...value, pi]);
                 break;
+            // Euler's number
+            case act === 'e':
+                const e = Math.E;
+                setValue((value) => [...value, e]);
+                break;
             // dot .
             case act === '.':
                 setValue((value) => [...value, act]);
@@ -230,7 +235,8 @@ const App = () => {
         { label: 'ln', value: 'ln', clazz: 'btn-light' },
         { label: 'lg', value: 'lg', clazz: 'btn-light' },
         { label: 'n!', value: 'n!', clazz: 'btn-light' },
-        { label: '\u03C0', value: 'pi', clazz: 'btn-light' }
+        { label: '\u03C0', value: 'pi', clazz: 'btn-light' },
+        { label: 'e', value: 'e', clazz: 'btn-light' }
     ];
 
     return (
